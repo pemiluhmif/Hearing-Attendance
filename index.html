@@ -1,0 +1,45 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  <link rel="shortcut icon" type="image/ico" href="img/favicon.ico"/>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <title>Web Registrasi - Pemilu HMIF 2019</title>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Pendaftaran Hearing</h1>
+    <img class="logo" src="img/logo.png"/>
+
+    <form onsubmit="check();return false;">
+      <p class="input-description">Masukkan NIM</p>
+      <input id="nimInput" type="number"/>
+    </form>
+
+  </div>
+
+  <div id="modal-cek" class="modal">
+    <h1 class="modal-title">Cek</h1>
+    <p id="nimCek"></p>
+    <div class="button-holder">
+      <a onclick="closeDialog('cek');" class="modal-button">Salah</a>
+      <a id="button-send" class="modal-button">Benar</a>
+    </div>
+  </div>
+
+  <div id="modal-load" class="modal">
+      <h1 class="modal-title">Mohon tunggu</h1>
+  </div>
+  
+
+  <div id="modal-result" class="modal">
+    <h1 class="modal-title">Terdaftarkan</h1>
+    <a onclick="closeDialog('result');" class="modal-button">Oke</a>
+  </div>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/gh/jiangts/JS-OTP@master/dist/jsOTP.min.js" defer></script>
+  <script src="js/script.js" defer></script>
+</body>
+</html>

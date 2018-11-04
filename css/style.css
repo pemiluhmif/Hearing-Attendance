@@ -1,0 +1,105 @@
+:root {
+  --modal-color:#DFDFDF;
+  --modal-button-color:#FFFFFF;
+  --modal-button-hover:#EEEEEE;
+}
+
+body{
+  background:url(../img/bg_light.png);
+  font-family: 'Roboto', sans-serif;
+}
+
+.input-description{
+  font-size: 1.5em;
+  text-align: center;
+}
+
+input{
+  font-size: 2em;
+}
+
+.container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.title{
+  font-size: 3em;
+}
+
+.logo{
+  width:300px;
+}
+
+#nimCek{
+  font-size: 2em;
+}
+
+.modal-load{
+  min-width: 200px;
+}
+
+.modal{
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 50vmin;
+  margin-left: -25vmin;
+  transform: translateY(-50%) scaleY(0);
+
+  padding: 20px;
+  box-sizing: border-box;
+
+  align-items: center;
+  flex-direction: column;
+
+  background-color: var(--modal-color);
+
+  visibility: hidden;
+  opacity: 0;
+
+  transition: all 0.15s ease-out;
+
+  border: 10px solid #EFA74E;
+  outline: 20px solid var(--modal-color);
+}
+
+.modal.modal-open{
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(-50%) scaleY(1);
+  transition: all 0.15s ease-out;
+}
+
+.modal-title{
+  text-align: center;
+  margin: 0px;
+  font-size: 3em;
+}
+
+.modal-button{
+  background-color: var(--modal-button-color);
+  font-size: 1em;
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px;
+  transition: background-color 0.1s ease-out;
+}
+
+.modal-button:hover{
+  background-color: var(--modal-button-hover);
+}
+
+.button-holder{
+  display: flex;
+  flex-direction: row;
+  width:100%;
+  max-width: 200px;
+  justify-content: space-evenly;
+}

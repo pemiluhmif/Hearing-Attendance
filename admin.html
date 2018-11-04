@@ -1,0 +1,23 @@
+<html>
+<head>
+  <title>admin</title>
+
+</head>
+<body>
+  <h1>Admin</h1>
+  <form onsubmit="save(); return false;">
+    <p>Secret</p>
+    <input id="scriptUrl" type="text"></input>
+    <p>Hearing ID</p>
+    <input id="hearingId" type="number" min=1></input>
+    <p>Secret</p>
+    <input id="secretText" type="text"></input>
+    <br/><br/>
+    <button type="submit">Submit</button>
+  </form>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous" defer></script>
+  <script src="js/admin.js" defer></script>
+
+</body>
+</html>
