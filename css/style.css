@@ -1,5 +1,6 @@
 :root {
   --modal-color:#DFDFDF;
+  --modal-color-fail:#E35744;
   --modal-button-color:#FFFFFF;
   --modal-button-hover:#EEEEEE;
 }
@@ -7,6 +8,9 @@
 body{
   background: url(../img/bg_light.png) no-repeat center center/cover;
   font-family: 'Roboto', sans-serif;
+  width:100%;
+  height:100%;
+  margin:0px;
 }
 
 .input-description{
@@ -84,6 +88,7 @@ input{
 }
 
 .modal-button{
+  margin-top: 10px;
   background-color: var(--modal-button-color);
   font-size: 1em;
   padding: 15px;
@@ -94,6 +99,15 @@ input{
 
 .modal-button:hover{
   background-color: var(--modal-button-hover);
+}
+
+#modal-fail{
+  background-color: var(--modal-color-fail);
+  color:white;
+}
+
+#modal-fail .modal-button{
+  color:var(--modal-color-fail);
 }
 
 .button-holder{
