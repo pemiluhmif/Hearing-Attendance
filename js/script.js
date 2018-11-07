@@ -35,20 +35,27 @@ function kirim(hearingNo,nimData){
   })
   .done(function( msg ) {
     closeDialog("load");
-    openDialog("result");
-
     $("#nimInput").val("");
+
+    if(msg=="Sukses"){
+      openDialog("result");
+    }else{
+      openDialog("fail");
+    }
+
+
+
 
   }).fail(function( jqXHR, textStatus ) {
     alert("Failed: " + textStatus);
   });
 }
 
-function check(){ 
+function check(){
   var nimData = $("#nimInput").val();
 
   if(NIM_REGEX.test(nimData)){
-    $("#nimInput").blur();  
+    $("#nimInput").blur();
     $("#nimCek").text(nimData);
     $("#button-send").attr("onClick","kirim("+hearingKe+","+nimData+");");
     openDialog("cek")
@@ -83,6 +90,7 @@ $(document).keypress(function(key) {
       $("#button-send").click();
     }else{
       closeDialog("result");
+      closeDialog("fail");
     }
   }
 });
